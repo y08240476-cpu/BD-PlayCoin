@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10082f">
+<title>BD-PlayCoin | Gaming Top-up Bangladesh</title>
+<style>
+:root{--bg:#10082f;--panel:#19133d;--panel2:#211a4c;--line:#352b68;--purple:#8b45f6;--pink:#bd4bff;--gold:#ffbf24;--text:#f8f6ff;--muted:#b9b1d5;--green:#43d89a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 50% -20%,#34206b 0,#10082f 42%);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+a{color:inherit;text-decoration:none}button,input,select{font:inherit}
+header{position:sticky;top:0;z-index:20;background:#100d25ee;backdrop-filter:blur(14px);border-bottom:1px solid #493b75}
+.nav{max-width:1180px;margin:auto;min-height:76px;padding:12px 22px;display:flex;align-items:center;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.5px;font-size:22px;white-space:nowrap}
+.brand-mark{width:42px;height:42px;border-radius:13px;background:linear-gradient(140deg,#ffc52e,#ff8b22 45%,#a43df2);display:grid;place-items:center;color:#1c103b;font-size:23px;box-shadow:0 7px 25px #a34bff55}
+.search{flex:1;max-width:430px;margin-left:auto;position:relative}.search input{width:100%;border:1px solid #3c3560;background:#1b1834;color:white;border-radius:30px;padding:13px 18px 13px 44px;outline:none}.search:before{content:"⌕";position:absolute;left:17px;top:4px;font-size:27px;color:#c9c1e5}
+.actions{display:flex;gap:9px}.btn{border:0;border-radius:12px;padding:12px 18px;font-weight:800;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-2px);filter:brightness(1.1)}.btn-gold{background:linear-gradient(120deg,#ffc42c,#ff9b1c);color:#27133b}.btn-outline{background:#211a43;color:white;border:1px solid #51457e}.menu{display:none;background:#211a43;border:1px solid #51457e;color:white;border-radius:10px;padding:9px 12px;font-size:20px}
+main{max-width:1180px;margin:auto;padding:0 22px 55px}
+.hero{margin:26px 0 24px;padding:42px 34px;border:1px solid #563b91;border-radius:24px;overflow:hidden;position:relative;background:linear-gradient(115deg,#27105d 0%,#4b1a8d 48%,#18214d 100%);box-shadow:0 18px 55px #05031366}
+.hero:after{content:"";position:absolute;width:290px;height:290px;border-radius:50%;right:5%;top:-95px;background:radial-gradient(circle,#e0aaff55,transparent 68%);pointer-events:none}
+.hero-content{position:relative;z-index:1;max-width:650px}.eyebrow{color:#ffd46a;font-weight:900;letter-spacing:2px;font-size:12px}.hero h1{font-size:clamp(30px,5vw,52px);line-height:1.08;margin:12px 0}.hero h1 span{color:#ffd15a}.hero p{color:#e0d9f6;max-width:520px;line-height:1.7}.hero .btn{margin-top:10px}.hero-art{position:absolute;right:8%;bottom:15px;font-size:clamp(90px,16vw,175px);filter:drop-shadow(0 15px 20px #08031988);opacity:.92}
+.trust{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0 34px}.trust span{background:#1a143c;border:1px solid #34295f;border-radius:30px;padding:9px 14px;color:#ddd6f1;font-size:13px}
+.section{margin:35px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:18px}.section h2{font-size:25px;margin:0}.section-head p{color:var(--muted);margin:7px 0 0;font-size:14px}.accent{border-left:5px solid #a75cff;padding-left:12px}
+.tabs{display:flex;gap:10px;overflow:auto;padding:2px 1px 13px;margin-bottom:8px;scrollbar-width:thin}.tab{white-space:nowrap;border:1px solid #3b3067;background:#211a43;color:#eee8ff;padding:12px 20px;border-radius:30px;font-weight:800;cursor:pointer}.tab.active{background:linear-gradient(100deg,#8035e9,#bb4de9);border-color:transparent;box-shadow:0 8px 22px #8b45f655}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.product{background:linear-gradient(145deg,#211b47,#171332);border:1px solid #39305f;border-radius:17px;padding:13px;display:flex;align-items:center;gap:13px;min-height:112px;transition:.2s}.product:hover{transform:translateY(-3px);border-color:#9360df}.thumb{width:76px;height:76px;flex:0 0 76px;border-radius:13px;display:grid;place-items:center;font-size:38px;background:linear-gradient(145deg,#6030a4,#202d64);box-shadow:inset 0 0 20px #ffffff18}.thumb.fire{background:linear-gradient(145deg,#ff633e,#77205c)}.thumb.blue{background:linear-gradient(145deg,#32b6e8,#263b91)}.thumb.gold{background:linear-gradient(145deg,#ffc34c,#9c4b19)}.thumb.green{background:linear-gradient(145deg,#37c99b,#175b69)}.product h3{font-size:15px;margin:0 0 6px;line-height:1.3}.product small{color:#bdb5d7}.tag{display:inline-block;margin-top:7px;background:#3b2d16;color:#ffd45d;border:1px solid #79602a;border-radius:6px;padding:3px 7px;font-size:10px;font-weight:900}
+.game-card{padding:0;display:block;overflow:hidden}.game-art{height:140px;display:grid;place-items:center;font-size:72px;position:relative;background:linear-gradient(135deg,#42217b,#172c61)}.game-art:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#17133288,transparent 70%)}.game-art span{position:relative;z-index:1;filter:drop-shadow(0 8px 10px #0008)}.game-info{padding:13px}.game-info h3{font-size:15px;margin:0 0 5px}.game-info p{margin:0;color:#bdb5d7;font-size:12px}.game-info .btn{margin-top:12px;width:100%;padding:10px;font-size:13px}
+.offer{background:linear-gradient(110deg,#2c1a58,#19173d);border:1px solid #483778;border-radius:17px;padding:20px;display:flex;align-items:center;justify-content:space-between;gap:15px}.offer strong{font-size:18px}.offer p{color:var(--muted);margin:6px 0 0;font-size:13px}
+footer{border-top:1px solid #352b60;margin-top:50px;padding:28px 0;color:#aaa2c5;text-align:center;font-size:13px}.footer-brand{font-weight:900;color:#f7f3ff;font-size:18px;margin-bottom:8px}
+.modal-backdrop{position:fixed;inset:0;background:#05030dcc;z-index:50;display:none;align-items:center;justify-content:center;padding:18px}.modal-backdrop.show{display:flex}.modal{width:min(470px,100%);background:#1b153b;border:1px solid #58458a;border-radius:20px;padding:22px;box-shadow:0 25px 80px #0009}.modal-top{display:flex;justify-content:space-between;align-items:center}.modal h2{margin:0;font-size:21px}.close{background:transparent;color:white;border:0;font-size:27px;cursor:pointer}.field{margin-top:15px}.field label{display:block;font-size:13px;color:#d9d1ed;margin-bottom:7px}.field input,.field select{width:100%;padding:12px;border-radius:10px;border:1px solid #514477;background:#100d28;color:white;outline:none}.notice{margin-top:15px;padding:12px;border-radius:10px;background:#342b18;color:#ffe09a;font-size:12px;line-height:1.5}.submit{width:100%;margin-top:17px}.empty{display:none;color:var(--muted);padding:22px;text-align:center}
+@media(max-width:760px){.nav{gap:10px;padding:10px 14px}.brand{font-size:18px}.brand-mark{width:36px;height:36px}.search{max-width:none}.actions .btn-outline{display:none}.actions .btn{padding:10px 12px;font-size:13px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.product{padding:10px;gap:9px;min-height:94px}.thumb{width:57px;height:57px;flex-basis:57px;font-size:29px}.product h3{font-size:13px}.hero{padding:30px 22px}.hero-art{right:0;opacity:.3}.hero-content{max-width:100%}.game-art{height:112px;font-size:57px}main{padding:0 14px 40px}}
+@media(max-width:420px){.brand{font-size:15px}.brand-mark{width:31px;height:31px;font-size:18px}.search input{padding:11px 10px 11px 34px;font-size:12px}.search:before{left:12px;top:1px}.actions .btn{font-size:11px;padding:10px}.grid{gap:9px}.product{display:block;text-align:left}.thumb{width:100%;height:75px;margin-bottom:9px}.product h3{min-height:34px}.game-art{height:100px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <button class="menu" aria-label="Menu" onclick="document.getElementById('games').scrollIntoView()">☰</button>
+    <a class="brand" href="#"><span class="brand-mark">◆</span><span>BD-<b>PlayCoin</b></span></a>
+    <div class="search"><input id="search" type="search" placeholder="Search games & products..." oninput="filterItems()"></div>
+    <div class="actions"><button class="btn btn-outline" onclick="showDemo('Login / Register')">Login</button><button class="btn btn-gold" onclick="showDemo('Create account')">Register</button></div>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <div class="eyebrow">GAMING TOP-UP STORE • BANGLADESH</div>
+      <h1>Level Up Your Game with <span>BD-PlayCoin</span></h1>
+      <p>Your gaming top-up destination. Explore popular games, choose a product and review your order in one simple place.</p>
+      <button class="btn btn-gold" onclick="document.getElementById('games').scrollIntoView()">Explore All Games →</button>
+    </div>
+    <div class="hero-art">🎮</div>
+  </section>
+  <div class="trust"><span>⚡ Quick order flow</span><span>🔒 Demo storefront</span><span>🇧🇩 Bangladesh-focused</span></div>
+
+  <section class="section" id="popular">
+    <div class="section-head"><div><h2 class="accent">Popular Products</h2><p>Explore featured gaming products.</p></div></div>
+    <div class="grid" id="popularGrid">
+      <article class="product searchable" data-name="Free Fire Diamond">
+        <div class="thumb fire">💎</div><div><h3>Free Fire Diamond Top Up</h3><small>Free Fire • Bangladesh</small><br><span class="tag">POPULAR</span></div>
+      </article>
+      <article class="product searchable" data-name="Free Fire Membership">
+        <div class="thumb gold">👑</div><div><h3>Free Fire Membership</h3><small>Weekly / Monthly</small><br><span class="tag">FEATURED</span></div>
+      </article>
+      <article class="product searchable" data-name="Mobile Legends Diamonds">
+        <div class="thumb blue">⚔️</div><div><h3>Mobile Legends Diamonds</h3><small>MLBB • All Regions</small><br><span class="tag">POPULAR</span></div>
+      </article>
+      <article class="product searchable" data-name="PUBG UC">
+        <div class="thumb">🎯</div><div><h3>PUBG Mobile UC</h3><small>Global • UC packs</small><br><span class="tag">FEATURED</span></div>
+      </article>
+      <article class="product searchable" data-name="Genshin Impact Crystals">
+        <div class="thumb green">✨</div><div><h3>Genshin Impact Crystals</h3><small>Genesis Crystals</small><br><span class="tag">POPULAR</span></div>
+      </article>
+      <article class="product searchable" data-name="Blood Strike Gold">
+        <div class="thumb fire">🔥</div><div><h3>Blood Strike Gold</h3><small>Global</small><br><span class="tag">FEATURED</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="games">
+    <div class="section-head"><div><h2 class="accent">All Games</h2><p>Choose your game to view available top-up options.</p></div></div>
+    <div class="tabs" role="tablist">
+      <button class="tab active" onclick="setCategory('all',this)">All Games</button>
+      <button class="tab" onclick="setCategory('action',this)">Popular Games</button>
+      <button class="tab" onclick="setCategory('app',this)">App Top Up</button>
+    </div>
+    <div class="grid" id="gameGrid">
+      <article class="product game-card searchable" data-name="Free Fire" data-category="action"><div class="game-art" style="background:linear-gradient(135deg,#b83d37,#42134f)"><span>🔥</span></div><div class="game-info"><h3>Free Fire</h3><p>Diamonds • Membership</p><button class="btn btn-gold" onclick="openOrder('Free Fire')">View products</button></div></article>
+      <article class="product game-card searchable" data-name="Mobile Legends" data-category="action"><div class="game-art" style="background:linear-gradient(135deg,#287fbc,#342064)"><span>⚔️</span></div><div class="game-info"><h3>Mobile Legends</h3><p>Diamonds • Weekly Pass</p><button class="btn btn-gold" onclick="openOrder('Mobile Legends')">View products</button></div></article>
+      <article class="product game-card searchable" data-name="PUBG Mobile" data-category="action"><div class="game-art" style="background:linear-gradient(135deg,#b67a28,#3e2a27)"><span>🎯</span></div><div class="game-info"><h3>PUBG Mobile</h3><p>UC • Global</p><button class="btn btn-gold" onclick="openOrder('PUBG Mobile')">View products</button></div></article>
+      <article class="product game-card searchable" data-name="Genshin Impact" data-category="action"><div class="game-art" style="background:linear-gradient(135deg,#42a9b6,#443b9c)"><span>✨</span></div><div class="game-info"><h3>Genshin Impact</h3><p>Genesis Crystals</p><button class="btn btn-gold" onclick="openOrder('Genshin Impact')">View products</button></div></article>
+      <article class="product game-card searchable" data-name="Blood Strike" data-category="action"><div class="game-art" style="background:linear-gradient(135deg,#a22d45,#23204d)"><span>💥</span></div><div class="game-info"><h3>Blood Strike</h3><p>Gold • Global</p><button class="btn btn-gold" onclick="openOrder('Blood Strike')">View products</button></div></article>
+      <article class="product game-card searchable" data-name="Clash of Clans" data-category="action"><div class="game-art" style="background:linear-gradient(135deg,#d58b2d,#572a42)"><span>🛡️</span></div><div class="game-info"><h3>Clash of Clans</h3><p>Gold Pass • Gems</p><button class="btn btn-gold" onclick="openOrder('Clash of Clans')">View products</button></div></article>
+      <article class="product game-card searchable" data-name="FC Mobile" data-category="action"><div class="game-art" style="background:linear-gradient(135deg,#167d87,#18335c)"><span>⚽</span></div><div class="game-info"><h3>FC Mobile</h3><p>Points • Packs</p><button class="btn btn-gold" onclick="openOrder('FC Mobile')">View products</button></div></article>
+      <article class="product game-card searchable" data-name="Valorant" data-category="action"><div class="game-art" style="background:linear-gradient(135deg,#c34b51,#54224e)"><span>🎮</span></div><div class="game-info"><h3>Valorant</h3><p>Points • Region dependent</p><button class="btn btn-gold" onclick="openOrder('Valorant')">View products</button></div></article>
+      <article class="product game-card searchable" data-name="TikTok Coins" data-category="app"><div class="game-art" style="background:linear-gradient(135deg,#242c45,#5b286e)"><span>♪</span></div><div class="game-info"><h3>TikTok Coins</h3><p>App top-up</p><button class="btn btn-gold" onclick="openOrder('TikTok Coins')">View products</button></div></article>
+      <article class="product game-card searchable" data-name="Telegram Premium" data-category="app"><div class="game-art" style="background:linear-gradient(135deg,#2786c8,#21426b)"><span>✈️</span></div><div class="game-info"><h3>Telegram Premium</h3><p>Subscription</p><button class="btn btn-gold" onclick="openOrder('Telegram Premium')">View products</button></div></article>
+      <article class="product game-card searchable" data-name="Discord Nitro" data-category="app"><div class="game-art" style="background:linear-gradient(135deg,#5865d9,#292c65)"><span>💬</span></div><div class="game-info"><h3>Discord Nitro</h3><p>Subscription</p><button class="btn btn-gold" onclick="openOrder('Discord Nitro')">View products</button></div></article>
+      <article class="product game-card searchable" data-name="Other Top Up" data-category="app"><div class="game-art" style="background:linear-gradient(135deg,#7046a7,#27204e)"><span>➕</span></div><div class="game-info"><h3>Other Top-up</h3><p>Ask about availability</p><button class="btn btn-gold" onclick="openOrder('Other Top-up')">View products</button></div></article>
+    </div>
+    <div class="empty" id="empty">No matching products found. Try another search.</div>
+  </section>
+
+  <section class="section">
+    <div class="offer"><div><strong>Need help with an order?</strong><p>Customer support and real order processing will be connected in a later setup step.</p></div><button class="btn btn-gold" onclick="showDemo('Customer Support')">Contact support</button></div>
+  </section>
+  <footer><div class="footer-brand">BD-PlayCoin</div><div>Gaming Top-up Store Bangladesh</div><p>© 2026 BD-PlayCoin. Demo storefront — no real payments are processed.</p></footer>
+</main>
+
+<div class="modal-backdrop" id="orderModal" onclick="if(event.target===this)closeOrder()">
+  <div class="modal">
+    <div class="modal-top"><h2 id="modalTitle">Place an order</h2><button class="close" onclick="closeOrder()" aria-label="Close">×</button></div>
+    <div class="field"><label for="playerId">Player ID / Account ID</label><input id="playerId" placeholder="Enter your game ID"></div>
+    <div class="field"><label for="serverId">Server / Zone ID (if required)</label><input id="serverId" placeholder="Enter server ID if applicable"></div>
+    <div class="field"><label for="package">Package</label><select id="package"><option value="">Select package (demo)</option><option>Small package</option><option>Medium package</option><option>Large package</option><option>Weekly / Monthly pass</option></select></div>
+    <div class="notice">Demo only: this form does not submit an order or take payment. Do not enter passwords, PINs, OTPs or payment account details.</div>
+    <button class="btn btn-gold submit" onclick="demoSubmit()">Review demo order</button>
+  </div>
+</div>
+<script>
+let activeCategory='all';
+function setCategory(cat,btn){activeCategory=cat;document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));btn.classList.add('active');filterItems()}
+function filterItems(){const q=document.getElementById('search').value.toLowerCase().trim();let visible=0;document.querySelectorAll('#gameGrid .searchable').forEach(card=>{const name=(card.dataset.name||'').toLowerCase();const cat=card.dataset.category||'';const matchText=name.includes(q);const matchCat=activeCategory==='all'||cat===activeCategory;card.style.display=matchText&&matchCat?'':'none';if(matchText&&matchCat)visible++});document.getElementById('empty').style.display=visible?'none':'block';document.querySelectorAll('#popularGrid .searchable').forEach(card=>{card.style.display=(card.dataset.name||'').toLowerCase().includes(q)?'':'none'})}
+function openOrder(game){document.getElementById('modalTitle').textContent=game+' — Demo Order';document.getElementById('orderModal').classList.add('show');document.getElementById('playerId').focus()}
+function closeOrder(){document.getElementById('orderModal').classList.remove('show')}
+function demoSubmit(){const game=document.getElementById('modalTitle').textContent;const id=document.getElementById('playerId').value.trim();const pack=document.getElementById('package').value;if(!id||!pack){alert('Please enter a Player ID and select a demo package.');return}alert('Demo preview only. No order was placed.\\n'+game+'\\nPlayer ID: '+id+'\\nPackage: '+pack);closeOrder()}
+function showDemo(name){alert(name+' will be connected when the website backend is set up. This is currently a demo storefront.')}
+</script>
+</body>
+</html>
